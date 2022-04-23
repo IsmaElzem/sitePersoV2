@@ -9,7 +9,7 @@
             <!-- Début en tête Ismaël Zemmouj -->
             <div class="ligne_horizontale">
                 <div class="ligne_horizontale_1"></div>
-                <h3 class="text-center titre_principal">Resume</h3>
+                <h3 class="text-center titre_principal">Ismaël Zemmouj</h3>
                 <div class="ligne_horizontale_2"></div>
             </div>
             <!-- Fin en tête Ismaël Zemmouj -->
@@ -464,8 +464,7 @@
 
         <div class="col-md-4 text-center d-flex align-items-stretch mt-5">
             <div class="card img_test" style="width: 18rem;">
-                <img class="card-img-top img-fluid thumbnail zoom" src="{{ asset('img/img_shot_code.png') }}"
-                     alt="Card image cap">
+                <img class="card-img-top img-fluid thumbnail zoom" src="{{ asset('img/img_shot_code.png') }}" alt="Card image cap">
                 <div class="card-body d-inline-flex flex-column">
                     <h5 class="card-title mt-2">Shoot em up</h5>
                     <p class="card-text">Détruire le plus de vaisseau ennemi possible, tel est le but. Vous avez 5 vies,

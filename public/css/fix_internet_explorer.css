@@ -17,12 +17,12 @@ body {
 
 /*************** Début courbe gauche ***************/
 div.courbe_gauche {
-    width: 4px;
+    width:4px;
     background-color: #CCD1D9;
     position: fixed;
-    top: 180px;
-    bottom: 400px;
-    left: 30px;
+    top:180px;
+    bottom:400px;
+    left:30px;
     min-height: 350px
 }
 
@@ -162,12 +162,11 @@ div.ligne_horizontale_2 {
     border: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-
 /* Pour que le navbar soit au dessus des points */
 
 nav {
-    z-index: 4;
-    position: relative;
+    z-index:4;
+    position:relative;
     background-color: #424949;
 }
 
@@ -179,24 +178,25 @@ nav {
 /* Vérifier la largeur de l'écran pour afficher la navbar en haut ' */
 
 @media (max-width: 1300px) {
-    .navbar_verticale_large_screen {
-        display: none;
+    .navbar_verticale_large_screen{
+        display:none;
     }
-
-    .navbar_small_screen {
-        display: block;
+    .navbar_small_screen{
+        display:block;
     }
 }
 
 @media (min-width: 1300px) {
-    .navbar_verticale_large_screen {
-        display: block;
+    .navbar_verticale_large_screen{
+        display:block;
     }
-
-    .navbar_small_screen {
-        display: none;
+    .navbar_small_screen{
+        display:none;
     }
 }
+
+
+
 
 
 /*************** Fin navbar petit écran ***************/
@@ -216,12 +216,12 @@ div.card {
 /* Début Resize des images  */
 
 .logo_vw {
-    width: 12%;
+    width:12%;
     height: auto;
 }
 
 .logo_upjv {
-    width: 15%; /* you can use % */
+    width:15%; /* you can use % */
     height: auto;
 }
 
@@ -286,8 +286,8 @@ div.card {
 
 /* Point bleu sur le trait */
 
-.marker:hover::before {
-    border-color: #2b5178;
+.marker:hover::before{
+    border-color:  #2b5178;
     transition: all 1000ms ease-in-out;
 }
 
@@ -348,16 +348,13 @@ div.card {
         left: 8px;
         width: 2px;
     }
-
     .timeline-block {
         width: 100%;
         margin-bottom: 30px;
     }
-
     .timeline-block-right {
         float: none;
     }
-
     .timeline-block-left {
         float: none;
         direction: ltr;
@@ -373,13 +370,13 @@ div.card {
     text-align: center;
 }
 
-#align_element_milieu {
+#align_element_milieu{
     margin: auto;
     cursor: pointer;
 }
 
 .fa-star {
-    color: #154360;
+    color : #154360;
 }
 
 
@@ -406,8 +403,8 @@ div.card {
     -webkit-transform: scale(1.2);
     -o-transform: scale(1.2);
     transform: scale(1.2);
-    position: relative;
-    z-index: 2;
+    position:relative;
+    z-index:2;
 }
 
 /**To keep upscaled images visible on mobile,
@@ -420,9 +417,7 @@ increase left & right margins a bit**/
 
     /**TIP: Easy escape for touch screens,
     give gallery's parent container a cursor: pointer.**/
-    .DivName {
-        cursor: pointer
-    }
+    .DivName {cursor: pointer}
 }
 
 .btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {

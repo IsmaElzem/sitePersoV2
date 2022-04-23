@@ -20,7 +20,6 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'role_id',
         'password',
     ];
 
@@ -42,21 +41,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    /**
-     * Récupérer le role de l'user.
-     */
-    public function role()
-    {
-        return $this->hasOne(Role::class);
-    }
-
-    /**
-     * Récupérer le role de l'user.
-     */
-    public function infoPerso()
-    {
-        return $this->hasOne(InfoPerso::class);
-    }
-
 }

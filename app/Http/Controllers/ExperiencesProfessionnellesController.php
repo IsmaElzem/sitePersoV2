@@ -29,7 +29,7 @@ class ExperiencesProfessionnellesController extends Controller
     /**
      * Permet de stocker en base de données la nouvelle expérience
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -40,7 +40,7 @@ class ExperiencesProfessionnellesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -51,7 +51,7 @@ class ExperiencesProfessionnellesController extends Controller
     /**
      * Permet de se rendre sur la page d'edite d'une expérience
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -62,8 +62,8 @@ class ExperiencesProfessionnellesController extends Controller
     /**
      * Permet de stocker en base de données l'édition de l'experience
      *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -74,7 +74,7 @@ class ExperiencesProfessionnellesController extends Controller
     /**
      * Supprimer l'expérience
      *
-     * @param int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

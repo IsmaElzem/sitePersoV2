@@ -15,125 +15,29 @@ body {
     color: #154360;
 }
 
-/*************** Début courbe gauche ***************/
-div.courbe_gauche {
-    width:4px;
-    background-color: #CCD1D9;
-    position: fixed;
-    top:180px;
-    bottom:400px;
-    left:30px;
-    min-height: 350px
+/* navbar */
+.banniere {
+    background-color: #154360;
+    color: white;
 }
 
-/* Permet de toujours avoir le texte en noir quand on passe la souris dessus */
-a.nav_btn_rond {
-    text-decoration: none;
-    color: black;
+.navbar a {
+    color: white;
 }
 
-/* Nav accueil */
+/*.navbar a:hover {
+    color: #0E89CB;
+}*/
 
-div.nav_point_accueil {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #D5DBDB;
-    margin-left: 24px;
-    margin-top: 250px;
-    position: fixed;
+.brandSite:hover {
+    pointer-events: none;
 }
 
-div.nav_text_accueil {
-    position: fixed;
-    margin-left: 45px;
-    margin-top: 248px;
+/* On affiche le texte en gras lorsqu'on le survole + On affiche une barre blanche sous le texte lorsqu'on la survole*/
+.hoverNav:hover {
+    font-weight: 700;
+    border-bottom: 1px solid white;
 }
-
-
-/* Nav parcours */
-
-div.nav_point_parcours {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #D5DBDB;
-    margin-left: 24px;
-    position: fixed;
-    margin-top: 300px;
-}
-
-div.nav_text_parcours {
-    position: fixed;
-    margin-left: 45px;
-    margin-top: 298px;
-}
-
-/* Nav competences */
-
-div.nav_point_competences {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #D5DBDB;
-    margin-left: 24px;
-    position: fixed;
-    margin-top: 350px;
-}
-
-div.nav_text_competences {
-    position: fixed;
-    margin-left: 45px;
-    margin-top: 348px;
-}
-
-/* Nav projets */
-
-div.nav_point_projets {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #D5DBDB;
-    margin-left: 24px;
-    position: fixed;
-    margin-top: 400px;
-}
-
-div.nav_text_projets {
-    position: fixed;
-    margin-left: 45px;
-    margin-top: 398px;
-}
-
-/* Nav contact */
-
-div.nav_point_contact {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #D5DBDB;
-    margin-left: 24px;
-    position: fixed;
-    margin-top: 450px;
-}
-
-div.nav_text_contact {
-    position: fixed;
-    margin-left: 45px;
-    margin-top: 448px;
-}
-
-.nav_marker_change_color:hover .nav_point_accueil, .nav_marker_change_color:hover .nav_point_parcours, .nav_marker_change_color:hover .nav_point_competences, .nav_marker_change_color:hover .nav_point_projets, .nav_marker_change_color:hover .nav_point_contact {
-    background-color: #2b5178;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
-}
-
-.justify-content-between:hover {
-    background-color: #E5E8E8;
-    cursor: pointer;
-}
-
-/*************** Fin courbe gauche ***************/
 
 /*************** Début courbe droite ***************/
 div.courbe_droite {
@@ -162,16 +66,6 @@ div.ligne_horizontale_2 {
     border: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-/* Pour que le navbar soit au dessus des points */
-
-nav {
-    z-index:4;
-    position:relative;
-    background-color: #424949;
-}
-
-
-/*************** Fin ligne horizontale début ***************/
 
 /*************** Début navbar petit écran ***************/
 
@@ -194,12 +88,6 @@ nav {
         display:none;
     }
 }
-
-
-
-
-
-/*************** Fin navbar petit écran ***************/
 
 @media (min-width: 1200px) {
     .container {
@@ -440,3 +328,5 @@ a {
 .fa-linkedin:hover, .fa-at:hover, .fa-github:hover {
     color: black;
 }
+
+

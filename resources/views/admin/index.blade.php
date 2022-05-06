@@ -4,27 +4,27 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12 mx-auto">
+            <div class="col-md-10 mx-auto">
 
                 <div class="mt-3 mb-3 text-center">
-                    <ul class="nav nav-tabs">
+                    <ul class="nav nav-tabs nav-justified">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#InformationsPerso">Mes informations perso.</a>
+                            <a class="nav-link" href="#InformationsPerso" data-toggle="tab">Mes informations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#ExperiencePro">Expériences pro.</a>
+                            <a class="nav-link" href="#experiencePro" data-toggle="tab">Expériences pro.</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#ParcoursUniversitaire">Parcours universitaire</a>
+                            <a class="nav-link" href="#ParcoursUniversitaire" data-toggle="tab">Université</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#Competences">Compétences</a>
+                            <a class="nav-link" href="#Competences" data-toggle="tab">Compétences</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#ProjetsRealiser">Projets réalisés</a>
+                            <a class="nav-link" href="#ProjetsRealiser" data-toggle="tab">Projets réalisés</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#Contact">Contact</a>
+                            <a class="nav-link" href="#Contact" data-toggle="tab">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -46,52 +46,112 @@
                       --------------------------------------------------------------------------------
                       ------------------------------------------------------------------------------->
                         <div class="tab-pane fade show active" id="InformationsPerso">
-                            <div class="row mb-3">
-                                <div class="col-md-12">
-                                    <label for="aProposDeMoi" class="form-label">A propos de moi</label>
-                                    <textarea type="text" class="form-control" id="aProposDeMoi" row="5"></textarea>
+
+                            <div class="row justify-content-center">
+                                <div class="col-md-8">
+                                    <div class="card">
+                                        <div class="card-header">{{ __('Modifier mes informations') }}</div>
+
+                                        <div class="card-body">
+                                            <!-- Début form -->
+                                            <form method="POST" id="formCreation" enctype="multipart/form-data" action="#">
+                                                @csrf
+
+                                                <!-- DEBUT NOM -->
+                                                <div class="form-group row my-3">
+                                                    <label for="nom"
+                                                           class="col-md-2 col-form-label text-md-end">{{ __('Nom') }}</label>
+                                                    <div class="col-md-4">
+                                                        <input type="text" class="form-control" id="nom">
+                                                    </div>
+                                                </div>
+                                                <!-- FIN NOM -->
+
+                                                <!-- DEBUT PRENOM -->
+                                                <div class="form-group row my-3">
+                                                    <label for="prenom"
+                                                           class="col-md-2 col-form-label text-md-end">{{ __('Prenom') }}</label>
+                                                    <div class="col-md-4">
+                                                        <input type="text" class="form-control" id="prenom">
+                                                    </div>
+                                                </div>
+                                                <!-- FIN PRENOM -->
+
+                                                <!-- DEBUT AGE -->
+                                                <div class="form-group row my-3">
+                                                    <label for="age"
+                                                           class="col-md-2 col-form-label text-md-end">{{ __('Age') }}</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control" id="age">
+                                                    </div>
+                                                </div>
+                                                <!-- FIN AGE -->
+
+                                                <!-- DEBUT LOCALISATION -->
+                                                <div class="form-group row my-3">
+                                                    <label for="localisation"
+                                                           class="col-md-2 col-form-label text-md-end">{{ __('Localisation') }}</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control" id="localisation">
+                                                    </div>
+                                                </div>
+                                                <!-- FIN LOCALISATION -->
+
+                                                <!-- DEBUT HOBBIES -->
+                                                <div class="form-group row my-3">
+                                                    <label for="hobbies"
+                                                           class="col-md-2 col-form-label text-md-end">{{ __('Hobbies') }}</label>
+                                                    <div class="col-md-3">
+                                                        <textarea type="text" class="form-control" id="hobbies" row="2"></textarea>
+                                                    </div>
+                                                </div>
+                                                <!-- FIN HOBBIES -->
+
+                                                <!-- DEBUT POINTS FORTS -->
+                                                <div class="form-group row my-3">
+                                                    <label for="pointsForts"
+                                                           class="col-md-2 col-form-label text-md-end">{{ __('Points Forts') }}</label>
+                                                    <div class="col-md-3">
+                                                        <textarea type="text" class="form-control" id="pointsForts" row="2"></textarea>
+                                                    </div>
+                                                </div>
+                                                <!-- FIN POINTS FORTS -->
+
+                                                <!-- DEBUT A PROPOS -->
+                                                <div class="form-group row mb-3">
+                                                    <label for="aPropos"
+                                                           class="col-md-2 col-form-label text-md-end">{{ __('A propos') }}</label>
+                                                    <div class="col-md-10">
+                                                        <textarea type="text" class="form-control" id="aPropos" row="5"></textarea>
+                                                    </div>
+                                                </div>
+                                                <!-- FIN À PROPOS -->
+
+                                                <!-- DEBUT PQ CE SITE -->
+                                                <div class="form-group row">
+                                                    <label for="raisonSite"
+                                                           class="col-md-2 col-form-label text-md-end">{{ __('Mais pourquoi ce site ?') }}</label>
+                                                    <div class="col-md-10">
+                                                        <textarea type="text" class="form-control" id="raisonSite" row="5"></textarea>
+                                                    </div>
+                                                </div>
+                                                <!-- FIN PQ CE SITE -->
+
+                                                <!-- DEBUT BTN VALIDE -->
+                                                <div class="row text-center my-3 justify-content-center">
+                                                    <div class="col-md-12">
+                                                        <button type="submit" form="formCreation" class="btn btn-primary">
+                                                            Valider
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <!-- FIN BTN VALIDE -->
+
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label for="RaisonSite" class="form-label">Mais pourquoi ce site ?</label>
-                                    <textarea type="text" class="form-control" id="RaisonSite" row="5"></textarea>
-
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <div class="col-md-2">
-                                    <label for="nom" class="form-label">Nom / Prénom</label>
-                                    <input type="text" class="form-control" id="nom">
-                                </div>
-                                <div class="col-md-2">
-                                    <label for="age" class="form-label">Age</label>
-                                    <input type="text" class="form-control" id="age">
-                                </div>
-                                <div class="col-md-2">
-                                    <label for="localisation" class="form-label">Localisation</label>
-                                    <input type="text" class="form-control" id="localisation">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-md-3">
-                                    <label for="hobbies" class="form-label">Hobbies</label>
-                                    <textarea type="text" class="form-control" id="hobbies" row="2"></textarea>
-                                </div>
-                                <div class="col-md-3">
-                                    <label for="pointsForts" class="form-label">Points forts</label>
-                                    <textarea type="text" class="form-control" id="pointsForts" row="2"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-12 mx-auto">
-                                    <a class="btn btn-primary" href="#" role="button">Modifier</a>
-                                </div>
-                            </div>
-
                         </div>
 
                         <!----------------------------------------------------------------------------
@@ -101,24 +161,29 @@
                       --------------------------------------------------------------------------------
                       --------------------------------------------------------------------------------
                       ------------------------------------------------------------------------------->
-                        <div class="tab-pane fade" id="ExperiencePro">
+                        <div class="tab-pane fade" id="experiencePro">
+
                             <div class="row">
                                 <div class="col-md-12 mx-auto">
-                                    <a class="btn btn-primary" href="#" role="button">Ajouter</a>
+                                    <h3>
+                                        Mes expériences professionnelles <a class="btn btn-primary" href="#" role="button">+</a>
+                                    </h3>
+
                                 </div>
                             </div>
-                            <div class="row">
+                            {{-- @if(!is_null($experiencePro))--}}
+                            <div class="row ">
                                 <div class="col-md-12">
-                                    <table class="table table-striped table-hover">
+                                    <table id="listeCompetences" class="table table-striped table-hover" style="width:100%">
                                         <thead>
                                         <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Entreprise</th>
-                                            <th scope="col">Poste</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Détail</th>
-                                            <th scope="col">Logo</th>
-                                            <th scope="col">Action</th>
+                                            <th>#</th>
+                                            <th>Entreprise</th>
+                                            <th>Poste</th>
+                                            <th>Date</th>
+                                            <th>Détail</th>
+                                            <th>Logo</th>
+                                            <th class="col-md-2">Action</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -138,7 +203,31 @@
                                     </table>
                                 </div>
                             </div>
+                            {{-- @else
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <div class="alert alert-warning">
+                                                Aucune compétence.
+                                            </div>
+                                         </div>
+                                    </div>
+                                @endif
+
+                                <!--  Début pagination -->
+                                <div class="row my-5">
+                                    <div class="col-md-12">
+
+                                        <div class="d-flex justify-content-center mt-4">
+                                            {!! $experiencePro->links() !!}
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Fin pagination -->
+                                --}}
                         </div>
+
+
 
                         <!----------------------------------------------------------------------------
                       --------------------------------------------------------------------------------
@@ -297,5 +386,21 @@
         </div>
 
     </div>
+
+    @section('js')
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#listeCompetences').DataTable({
+                    language: {
+                        url: 'https://cdn.datatables.net/plug-ins/1.11.3/i18n/fr_fr.json'
+                    },
+                    pageLength: 10
+                });
+            } );
+        </script>
+    @endsection
+
+
+
 
 @endsection

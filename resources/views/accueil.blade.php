@@ -9,7 +9,7 @@
             <!-- Début en tête Ismaël Zemmouj -->
             <div class="ligne_horizontale">
                 <div class="ligne_horizontale_1"></div>
-                <h3 class="text-center titre_principal">Ismaël Zemmouj</h3>
+                <h3 class="text-center titre_principal">Resume</h3>
                 <div class="ligne_horizontale_2"></div>
             </div>
             <!-- Fin en tête Ismaël Zemmouj -->

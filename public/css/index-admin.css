@@ -1,0 +1,66 @@
+body {
+    padding-top: 60px;
+}
+
+
+/********************** DEBUT NAVBAR **********************/
+.banniere {
+    background-color: #154360;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+}
+
+/*.navbar a:hover {
+    color: #0E89CB;
+}*/
+
+.brandSite:hover {
+    pointer-events: none;
+}
+
+/* On affiche le texte en gras lorsqu'on le survole + On affiche une barre blanche sous le texte lorsqu'on la survole*/
+.hoverNav:hover {
+    font-weight: 700;
+    border-bottom: 1px solid white;
+}
+
+.dropdown-menu-right {
+    background-color: #154360;
+    color: white;
+}
+
+/********************** FIN NAVBAR **********************/
+
+/********************** DEBUT CONTENU ADMIN **********************/
+/* EXPERIENCES PRO*/
+.fa-pen-to-square {
+    color: #5C9DC4;
+}
+
+.fa-trash-can {
+    color: #5C9DC4;
+}
+
+.fa-trash-can:hover {
+    color: #154360;
+}
+
+.fa-pen-to-square:hover {
+    color: #154360;
+}
+
+.btnDivers {
+    background-color: #5C9DC4;
+    color: white;
+}
+
+.btnDivers:hover {
+    background-color: #154360;
+    color: white;
+}
+
+/********************** FIN CONTENU ADMIN **********************/
+

@@ -1,0 +1,344 @@
+@font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('font/Segoe UI.woff') format('woff');
+}
+
+body {
+    background-color: #FEFAF6;
+    font-family: 'Segoe UI Regular';
+    font-size: 14px;
+}
+
+.titre_principal {
+    color: #154360;
+}
+
+/* navbar */
+.banniere {
+    background-color: #154360;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+}
+
+/*.navbar a:hover {
+    color: #0E89CB;
+}*/
+
+.brandSite:hover {
+    pointer-events: none;
+}
+
+.dropdown-menu-right {
+    background-color: #154360;
+    color: white;
+}
+
+/* On affiche le texte en gras lorsqu'on le survole + On affiche une barre blanche sous le texte lorsqu'on la survole*/
+.hoverNav:hover {
+    font-weight: 700;
+    border-bottom: 1px solid white;
+}
+
+/*************** Début courbe droite ***************/
+div.courbe_droite {
+
+}
+
+/*************** Fin courbe droite ***************/
+
+
+/*************** Début Ligne horizontale ***************/
+
+div.ligne_horizontale_1 {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+div.ligne_horizontale_2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/*************** Début navbar petit écran ***************/
+
+/* Vérifier la largeur de l'écran pour afficher la navbar en haut ' */
+
+@media (max-width: 1200px) {
+    .navbar_verticale_large_screen {
+        display: none;
+    }
+
+    .navbar_small_screen {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar_verticale_large_screen {
+        display: block;
+    }
+
+    .navbar_small_screen {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+div.card {
+    background-color: #FEFAF6;
+}
+
+/************** Début ligne expérience ***************/
+
+/* Début Resize des images  */
+
+.logo_vw {
+    width: 12%;
+    height: auto;
+}
+
+.logo_upjv {
+    width: 15%; /* you can use % */
+    height: auto;
+}
+
+.logo_parc_asterix {
+    width: 30%;
+    height: auto;
+}
+
+/* Fin Resize des images  */
+
+.timeline-container {
+    width: 100%;
+    padding: 50px 0;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/*  */
+
+.timeline-container:before { /*This is the line down the middle*/
+    content: ''; /*permet de tracer la ligne*/
+    position: absolute; /*aucun espace n'est crée*/
+    top: 0;
+    left: 50%; /*position du trait à la moitié de l'écran*/
+    margin-left: -1px;
+    width: 2px;
+    height: 100%;
+    background: #CCD1D9;
+    z-index: 1;
+}
+
+/* Bloc d'experience situé à gauche et à droite */
+
+.timeline-block {
+    width: -webkit-calc(50% + 8px); /*pour chrome*/
+    width: -moz-calc(50% + 8px); /*pour firefox*/
+    width: calc(50% + 8px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    clear: both;
+}
+
+/* Pour mettre les éléments à droite */
+
+.timeline-block-right {
+    float: right;
+}
+
+/* Pour mettre les éléments à gauche */
+
+.timeline-block-left {
+    float: left;
+    direction: rtl
+}
+
+/* Point bleu sur le trait */
+
+.marker:hover::before {
+    border-color: #2b5178;
+    transition: all 1000ms ease-in-out;
+}
+
+
+.marker {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #D5DBDB;
+    margin-top: 10px;
+    z-index: 3;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+/* Effet lorsque l'on passe la souris sur le market */
+
+.timeline-block:hover .marker {
+    background-color: #154360;
+}
+
+
+/* Ecart entre le trait et les écritures de droite/gauche */
+
+.timeline-content {
+    width: 95%;
+    padding: 0 15px;
+    color: #666
+}
+
+/* Titre expérience */
+
+.timeline-content h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 500
+}
+
+/* Date */
+
+.timeline-content span {
+    font-size: 15px;
+    color: #a4a4a4;
+}
+
+/* Paragraphe explicatif */
+
+.timeline-content p {
+    font-size: 14px;
+    line-height: 1.5em;
+    word-spacing: 1px;
+    color: #888;
+}
+
+
+@media screen and (max-width: 768px) {
+    .timeline-container:before {
+        left: 8px;
+        width: 2px;
+    }
+
+    .timeline-block {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .timeline-block-right {
+        float: none;
+    }
+
+    .timeline-block-left {
+        float: none;
+        direction: ltr;
+    }
+}
+
+/**************** Fin ligne expérience ****************/
+
+/**************** Debut compétences ****************/
+
+/* Mettre le tableau des langues au milieu + couleur des étoiles */
+#centrer_element {
+    text-align: center;
+}
+
+#align_element_milieu {
+    margin: auto;
+    cursor: pointer;
+}
+
+.fa-star {
+    color: #154360;
+}
+
+
+/**************** Fin compétences ****************/
+
+/**************** Début Projets réalisés ****************/
+
+.zoom {
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in;
+}
+
+.zoom:hover,
+.zoom:active,
+.zoom:focus {
+    /**adjust scale to desired size,
+    add browser prefixes**/
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    position: relative;
+    z-index: 2;
+}
+
+/**To keep upscaled images visible on mobile,
+increase left & right margins a bit**/
+@media only screen and (max-width: 768px) {
+    div.img_test {
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    /**TIP: Easy escape for touch screens,
+    give gallery's parent container a cursor: pointer.**/
+    .DivName {
+        cursor: pointer
+    }
+}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited {
+    background-color: #154360 !important;
+}
+
+.btn-secondary:hover {
+    background-color: #1F618D !important;
+}
+
+
+/**************** Fin Projets réalisés ****************/
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.fa-linkedin:hover, .fa-at:hover, .fa-github:hover {
+    color: black;
+}
+
+

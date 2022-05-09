@@ -25,7 +25,7 @@ Route::get('/', [SiteController::class, 'index'])->name('accueil');
 
 ////////////////////////////// Page admin //////////////////////////////
 Route::middleware(['admin'])->group(function () {
-    Route::group(['prefix' => 'admin'], function() {
+    Route::group(['prefix' => 'admin'], function () {
         /* Permet d'accèder à la page d'accueil de la partie admin */
         Route::get('/', [AdminController::class, 'index'])->name('admin');
 

@@ -8,13 +8,15 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!--[if gte IE 7]>
         <link rel="stylesheet" href="{{ asset('css/fix_internet_explorer.css') }}">
         <![endif]-->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+
     <![if !IE]>
     <link rel="stylesheet" href="{{ asset('css/index-admin.css?v=').time() }}">
     <![endif]>
@@ -33,38 +35,10 @@
         </button>
         <div class="collapse navbar-collapse text-center" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item active me-3">
-                    <a class="nav-link hoverNav" href="#section_presentation">Profil
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
 
                 <li class="nav-item active me-3">
-                    <a class="nav-link hoverNav" href="#section_experiences">Parcours
+                    <a class="nav-link hoverNav" href="{{ route('accueil') }}">Mon Site
                         <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-
-                <li class="nav-item active me-3">
-                    <a class="nav-link hoverNav" href="#section_competence">Compétences
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-
-                <li class="nav-item active me-3">
-                    <a class="nav-link hoverNav" href="#section_projets">Projets réalisés
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-
-                <li class="nav-item active me-3">
-                    <a class="nav-link hoverNav" href="#section_contact">Contact
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}" style="color: #154360;">Connexion
                     </a>
                 </li>
 
@@ -115,7 +89,10 @@
 <footer class="pt-4 my-md-5 pt-md-5 border-top mb-4">
     <div class="row text-center">
         <div class="col-12 col-md">
-            <p class="text-muted credit"><script>document.write(new Date().getFullYear())</script> - Ismaël Zemmouj - v2.0</p>
+            <p class="text-muted credit">
+                <script>document.write(new Date().getFullYear())</script>
+                - Ismaël Zemmouj - v2.0
+            </p>
         </div>
     </div>
 </footer>
@@ -124,9 +101,10 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
 
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -138,7 +116,45 @@
 <script src="https://kit.fontawesome.com/c0a7d0130b.js" crossorigin="anonymous"></script>
 
 
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#listeExperiences').DataTable({
+            "autoWidth": false,
+            "columnDefs": [
+                {"width": "60%", "targets": 4},
+                {"width": "5%", "targets": [0, 5]}
+            ]
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#listeUniversitaire').DataTable({
+            "autoWidth": false,
+            "columnDefs": [
+                {"width": "60%", "targets": 4},
+                {"width": "5%", "targets": [0, 5]},
+                {"width": "10%", "targets": [1, 2, 3]}
+            ]
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#listeCompetences').DataTable({});
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#listeProjets').DataTable({
+            "autoWidth": false,
+            "columnDefs": [
+                {"width": "65%", "targets": 2},
+                {"width": "15%", "targets": 1}
+            ]
+        });
+    });
+</script>
 
 
 </body>

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\InformationsPersonnellesRequest;
+use App\Models\InfoPerso;
 use Illuminate\Http\Request;
 
 class InformationsPersonnellesController extends Controller
@@ -17,6 +19,31 @@ class InformationsPersonnellesController extends Controller
     }
 
     /**
+     * Store a newly created resource in storage.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(InformationsPersonnellesRequest $request)
+    {
+        $infosPersos = InfoPerso::query()->create([
+            'nom' => $request->nom,
+            'prenom' => $request->prenom,
+            'age' => $request->age,
+            'localisation' => $request->localisation,
+            'hobbies' => $request->hobbies,
+            'points_forts' => $request->points_forts,
+            'aPropos' => $request->aPropos,
+            'raisonSite' => $request->raisonSite,
+        ]);
+
+        dd($infosPersos);
+
+        return redirect()->route('admin')->with('success', 'Mise à jour effectuée');
+
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -27,20 +54,9 @@ class InformationsPersonnellesController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -51,7 +67,7 @@ class InformationsPersonnellesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -62,8 +78,8 @@ class InformationsPersonnellesController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -74,7 +90,7 @@ class InformationsPersonnellesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

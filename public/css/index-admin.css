@@ -26,4 +26,40 @@ body {
     font-weight: 700;
     border-bottom: 1px solid white;
 }
+
+.dropdown-menu-right {
+    background-color: #154360;
+    color: white;
+}
+
 /********************** FIN NAVBAR **********************/
+
+/********************** DEBUT CONTENU ADMIN **********************/
+/* EXPERIENCES PRO*/
+.fa-pen-to-square {
+    color: #5C9DC4;
+}
+
+.fa-trash-can {
+    color: #5C9DC4;
+}
+
+.fa-trash-can:hover {
+    color: #154360;
+}
+
+.fa-pen-to-square:hover {
+    color: #154360;
+}
+
+.btnDivers {
+    background-color: #5C9DC4;
+    color: white;
+}
+
+.btnDivers:hover {
+    background-color: #154360;
+    color: white;
+}
+
+/********************** FIN CONTENU ADMIN **********************/
